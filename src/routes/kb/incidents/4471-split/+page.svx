@@ -1,0 +1,63 @@
+---
+layout: runbook
+title: '#4471 · more than one problem'
+owner: Jonas Eriksson
+status: open
+reviewed: 2026-10-30
+signature: Jonas Eriksson
+---
+
+<script>
+  import ProblemTable from '#lib/kb/ProblemTable.svelte';
+  import Callout from '#lib/kb/Callout.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+</script>
+
+[#4471](/kb/incidents/4471) was merged as one issue. It holds more than one. The merge
+followed the subject line ([decision 0001](/kb/decisions/0001-dedupe-by-subject)), and every
+report about a date has a subject that sounds the same. Read what each report says, and where
+it came from, and it splits.
+
+<Callout kind="warn">
+Fixing the parser does not close #4471. The other problems keep sending reports after it ships.
+</Callout>
+
+## What is in #4471
+
+<ProblemTable ticket={4471} />
+
+Counts are built from the ticket export at render time. Each report counts once, under one problem.
+
+## The problems
+
+### `parser`: the shared parser reads dates month first
+
+Most of our tenants write the day first. The parser reads month first, so for them the day and
+the month trade places: 7 April goes out as 4 July (R-41200). This is the problem #4471 names, and
+the fix queued for it.
+
+### `hint`: booking-v3 tells people to type month first
+
+The booking-v3 form prints `MM/DD/YYYY` under its date field. People do what it says, and the
+form then reads the date the tenant's way, day first. The symptom is the same flip, but it
+only happens through the form on booking-v3 tenants (Alder Physio, Copper Studio, Pale Harbour),
+and the parser fix does not touch it. Intake tags these by the reporter's browser, so the
+"tagged as" column disagrees with the cause in both directions.
+
+### `one-day-move`: dates land a day early
+
+These reports are not a flip. The date moves by one day: Tuesday 12 May shows as Monday
+11 May (R-41202), a client in Lisbon gets Tuesday and one in Toronto gets Monday (R-41344), an
+invite arrives before the booking was made (R-41236), and only June bookings are off by a day
+(R-41209). That reads as a time zone or daylight saving bug. The desk already listed these as a
+one-day move; the incident page still counts them under `parser` by tenant.
+
+## How to tell them apart
+
+1. Does the date move by a day, not swap day and month? `one-day-move`.
+2. Did it come in through the form of a booking-v3 tenant? `hint`.
+3. Otherwise, from a tenant that writes the day first: `parser`.
+
+The subject line tells you none of this. Read the body and look up the tenant.
+
+<RenderStamp {signature} />

@@ -1,0 +1,1 @@
+export{n as component}from"../chunks/C_ub8Eri.js";
