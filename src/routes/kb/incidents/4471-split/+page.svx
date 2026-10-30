@@ -24,7 +24,14 @@ Fixing the parser does not close #4471. The other problems keep sending reports 
 
 ## What is in #4471
 
-<ProblemTable ticket={4471} />
+<ProblemTable
+  ticket={4471}
+  issues={{
+    parser: 'https://github.com/jonaseriksson84/what-it-shows/issues/1',
+    hint: 'https://github.com/jonaseriksson84/what-it-shows/issues/2',
+    'one-day-move': 'https://github.com/jonaseriksson84/what-it-shows/issues/3',
+  }}
+/>
 
 Counts are built from the ticket export at render time. Each report counts once, under one problem.
 

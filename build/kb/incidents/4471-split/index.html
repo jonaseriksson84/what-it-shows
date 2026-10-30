@@ -9,11 +9,11 @@
 		<link href="../../../_app/immutable/chunks/CX85HuYK.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/BHRRc_3Z.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/Cvii5Bsg.js" rel="modulepreload">
-		<link href="../../../_app/immutable/entry/app.CPbR9IuD.js" rel="modulepreload">
+		<link href="../../../_app/immutable/entry/app.DpmO0nKA.js" rel="modulepreload">
 		<link href="../../../_app/immutable/nodes/0.DjRvTzrK.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/DK3Fl9T5.js" rel="modulepreload">
-		<link href="../../../_app/immutable/nodes/5.CxklzQta.js" rel="modulepreload">
-		<link href="../../../_app/immutable/chunks/C_ub8Eri.js" rel="modulepreload">
+		<link href="../../../_app/immutable/nodes/5.C8--j8S_.js" rel="modulepreload">
+		<link href="../../../_app/immutable/chunks/6_o0bTBZ.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/CYA8anOl.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/CVBzP17p.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/c-kAs9dt.js" rel="modulepreload">
@@ -26,7 +26,7 @@
     <div style="display: contents"><!--[--><!--[--><!--[0--><!--[--><!--[--><!--[-1--><!--[--><div class="kb svelte-e2jw2j"><header><a class="crumb svelte-e2jw2j" href="/kb">support desk · kb</a> <h1 class="svelte-e2jw2j">#4471 · more than one problem</h1> <p class="meta svelte-e2jw2j"><span>owner <b>Jonas Eriksson</b></span> <span class="status open svelte-e2jw2j">open</span> <span class="svelte-e2jw2j">reviewed 2026-10-30 · 0 days ago</span></p></header> <!--[-1--><!--]--> <main><p><a href="/kb/incidents/4471">#4471</a> was merged as one issue. It holds more than one. The merge
 followed the subject line (<a href="/kb/decisions/0001-dedupe-by-subject">decision 0001</a>), and every
 report about a date has a subject that sounds the same. Read what each report says, and where
-it came from, and it splits.</p> <aside class="warn svelte-17bri61"><!---->Fixing the parser does not close #4471. The other problems keep sending reports after it ships.<!----></aside><!----> <h2>What is in #4471</h2> <p class="sum svelte-1op6c6"><strong>412</strong> reports in #4471 · <strong>3</strong> problems <!--[0--><span class="muted svelte-1op6c6">(427 rows in the export; 15 came twice)</span><!--]--></p> <table><thead><tr><th>problem</th><th>reports</th><th>tagged as at intake</th><th>tenants</th><th>seen</th><th>tracked in</th></tr></thead><tbody><!--[--><tr><td><code>parser</code></td><td>374</td><td class="muted svelte-1op6c6">parser ×351 · hint ×23</td><td>11</td><td>2026-04-01 → 2026-10-04</td><td><!--[-1--><span class="warn svelte-1op6c6">no issue yet</span><!--]--></td></tr><tr><td><code>hint</code></td><td>33</td><td class="muted svelte-1op6c6">hint ×18 · parser ×15</td><td>3</td><td>2026-04-17 → 2026-09-22</td><td><!--[-1--><span class="warn svelte-1op6c6">no issue yet</span><!--]--></td></tr><tr><td><code>one-day-move</code></td><td>5</td><td class="muted svelte-1op6c6">parser ×5</td><td>5</td><td>2026-04-02 → 2026-10-04</td><td><!--[-1--><span class="warn svelte-1op6c6">no issue yet</span><!--]--></td></tr><!--]--></tbody></table><!----> <p>Counts are built from the ticket export at render time. Each report counts once, under one problem.</p> <h2>The problems</h2> <h3><code>parser</code>: the shared parser reads dates month first</h3> <p>Most of our tenants write the day first. The parser reads month first, so for them the day and
+it came from, and it splits.</p> <aside class="warn svelte-17bri61"><!---->Fixing the parser does not close #4471. The other problems keep sending reports after it ships.<!----></aside><!----> <h2>What is in #4471</h2> <p class="sum svelte-1op6c6"><strong>412</strong> reports in #4471 · <strong>3</strong> problems <!--[0--><span class="muted svelte-1op6c6">(427 rows in the export; 15 came twice)</span><!--]--></p> <table><thead><tr><th>problem</th><th>reports</th><th>tagged as at intake</th><th>tenants</th><th>seen</th><th>tracked in</th></tr></thead><tbody><!--[--><tr><td><code>parser</code></td><td>374</td><td class="muted svelte-1op6c6">parser ×351 · hint ×23</td><td>11</td><td>2026-04-01 → 2026-10-04</td><td><!--[0--><a href="https://github.com/jonaseriksson84/what-it-shows/issues/1">issue #1</a><!--]--></td></tr><tr><td><code>hint</code></td><td>33</td><td class="muted svelte-1op6c6">hint ×18 · parser ×15</td><td>3</td><td>2026-04-17 → 2026-09-22</td><td><!--[0--><a href="https://github.com/jonaseriksson84/what-it-shows/issues/2">issue #2</a><!--]--></td></tr><tr><td><code>one-day-move</code></td><td>5</td><td class="muted svelte-1op6c6">parser ×5</td><td>5</td><td>2026-04-02 → 2026-10-04</td><td><!--[0--><a href="https://github.com/jonaseriksson84/what-it-shows/issues/3">issue #3</a><!--]--></td></tr><!--]--></tbody></table><!----> <p>Counts are built from the ticket export at render time. Each report counts once, under one problem.</p> <h2>The problems</h2> <h3><code>parser</code>: the shared parser reads dates month first</h3> <p>Most of our tenants write the day first. The parser reads month first, so for them the day and
 the month trade places: 7 April goes out as 4 July (R-41200). This is the problem #4471 names, and
 the fix queued for it.</p> <h3><code>hint</code>: booking-v3 tells people to type month first</h3> <p>The booking-v3 form prints <code>MM/DD/YYYY</code> under its date field. People do what it says, and the
 form then reads the date the tenant’s way, day first. The symptom is the same flip, but it
@@ -40,16 +40,16 @@ one-day move; the incident page still counts them under <code>parser</code> by t
 			
 			<script>
 				{
-					__sveltekit_ww2es = {
+					__sveltekit_zrzcm6 = {
 						base: new URL("../../..", location).pathname.slice(0, -1),
-						version: "1793349416231"
+						version: "1793349846102"
 					};
 
 					const element = document.currentScript.parentElement;
 
 					import("../../../_app/immutable/entry/start.DHPY9Boj.js").then(async (kit) => {
-						kit.init(__sveltekit_ww2es);
-						const app = await import("../../../_app/immutable/entry/app.CPbR9IuD.js");
+						kit.init(__sveltekit_zrzcm6);
+						const app = await import("../../../_app/immutable/entry/app.DpmO0nKA.js");
 						kit.start(app, element, {
 							node_ids: [0, 5],
 							data: [null,null],
