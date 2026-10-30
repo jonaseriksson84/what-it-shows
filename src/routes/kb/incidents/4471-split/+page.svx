@@ -4,7 +4,7 @@ title: '#4471 · more than one problem'
 owner: Jonas Eriksson
 status: open
 reviewed: 2026-10-30
-signature: Jonas Eriksson
+signature: 'v1.eyJzdWIiOiI1MDAiLCJhdWQiOiJjaGFsbGVuZ2U6d2hhdC1pdC1zaG93cyIsImlhdCI6MTc5MzM1MDI4MiwiZXhwIjoxNzkzNDM2NjgyfQ.Wm0NCJ0zOwSFFo0IUf93YIk2X3CWt5aOcCR7Ggx-dEE'
 ---
 
 <script>
